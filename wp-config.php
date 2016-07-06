@@ -48,14 +48,22 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'OIj?y9`iEMH538B/`3?Jxre|ulm.8#SH+]wrVhwgzKTGWCCrf|1[T/!-zeV@gXx1');
-define('SECURE_AUTH_KEY',  '7C-s|q[(b0R.5M}A$MJt~{x8!~2U)!D{vb|WB1,yuco[NH:AS<%l1Mzp$`^W6k9b');
-define('LOGGED_IN_KEY',    '1>V4weK73@E$#|&27tg_{`M,{[xx{?7_FZTse7XL$rkvSK&y*7(osiL!aUA$W(S0');
-define('NONCE_KEY',        'T2axn2lipZW QkuJh,0+BW{kKZtPUv[Vx!2]o/S8vb^tf|xwSB4Iq|*?#9?|1y3;');
-define('AUTH_SALT',        'mu!=bpE-+7+?z8zW5VNT(ki#WLMo@lDV%d4DiwD&/* _}8KvY>`i>y7%,nD2|O#T');
-define('SECURE_AUTH_SALT', '^PVcI;BhYjeD9Is:2gjfXRM+C)c9|nG38{?d1Zg`jQVAF@cskbu^D-(pkjNO=B+v');
-define('LOGGED_IN_SALT',   'sPG<@Fb;8Z2J}cPp)ThH]i:OtmVk&X%H6%7Py4y|j[+EUu%#w]VUO5fK5@-,L<o1');
-define('NONCE_SALT',       '4cs+<-p3YR5TRJi>DCPeDJ_]?u([dp<1Otw4N0S4idJc[=/+Vz~N~|TFyTz$nL |');
+define('AUTH_KEY',         getenv('OYGA_AUTH_KEY') );
+define('SECURE_AUTH_KEY',  getenv('OYGA_SECURE_AUTH_KEY') );
+define('LOGGED_IN_KEY',    getenv('OYGA_LOGGED_IN_KEY') );
+define('NONCE_KEY',        getenv('OYGA_NONCE_KEY') );
+define('AUTH_SALT',        getenv('OYGA_AUTH_SALT') );
+define('SECURE_AUTH_SALT', getenv('OYGA_SECURE_AUTH_SALT') );
+define('LOGGED_IN_SALT',   getenv('OYGA_LOGGED_IN_SALT') );
+define('NONCE_SALT',       getenv('OYGA_NONCE_SALT') );
+
+/**#@+
+ * Amazon Web Services Keys
+ * 
+ */
+
+define( 'DBI_AWS_ACCESS_KEY_ID', getenv('OYGA_DBI_AWS_ACCESS_KEY_ID') );
+define( 'DBI_AWS_SECRET_ACCESS_KEY', getenv('OYGA_DBI_AWS_SECRET_ACCESS_KEY') );
 
 /**#@-*/
 
