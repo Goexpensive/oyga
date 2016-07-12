@@ -35,7 +35,7 @@
 						<h4><?php the_title(); ?></h4>
 						<h5 class="muted regular"><?php echo get_the_content(); ?></h5>
 					</div>
-					<button data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill">Contactar</button>
+					<button data-toggle="modal" data-target="#modal1" class="btn btn-orange-fill">Contactar</button>
 				</div>
 			</div>
 

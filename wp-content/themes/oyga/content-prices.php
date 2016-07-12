@@ -22,41 +22,23 @@
 			<h2 class="margin-top white">Precios</h2>
 			<h4 class="light white">Elegi tu plan para comenzar con nosotros!</h4>
 		</div>
-		<div class="row no-margin">
-			<div class="col-md-7 no-padding col-md-offset-5 pricings text-center">
+		<div class="row text-center">
+			<div class="col-md-2"></div>
+			<?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
+				
+				<div class="col-md-4 pricings">
+					<div class="pricing">
 
-			<?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); 
-
-				  if($query->current_post == 0) {
-
-				  		$active = 'active';
-				  } else {
-
-				  		$active = '';
-				  }
-
-
-			?>
-
-				<div class="pricing">
-					<div class="box-main <?php echo $active ?>" data-img="<?php bloginfo('template_url'); ?>/img/<?php echo $prices_images[$query->current_post] ?>.jpg">
-						<h4 class="white"><?php the_title(); ?></h4>
-						<h4 class="white regular light"><?php the_field('price'); ?></h4>
-						<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-white-fill"><?php the_field('label_button'); ?></a>
-						<i class="info-icon icon_question"></i>
-					</div>
-					<div class="box-second <?php echo $active ?>">
-						<div class="white-list text-left">
+							<h4 class="heading bold orange"><?php the_title(); ?></h4>
+							<h5 class="regular light"><?php the_field('price'); ?></h5>
 							
-							<?php echo get_the_content(); ?>
+							<?php the_content(); ?>
+							<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-orange"><?php the_field('label_button'); ?></a>
 
-						</div>
 					</div>
 				</div>
-
-			<?php endwhile; endif; wp_reset_postdata();?> 
-
-			</div>
+			<?php endwhile; endif; wp_reset_postdata();?>
+			<div class="col-md-2"></div> 
 		</div>
 	</div>
 </section>

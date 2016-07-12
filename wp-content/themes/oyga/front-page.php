@@ -28,8 +28,6 @@
 
 <?php get_template_part( 'content', 'prices' ); ?>
 
-<?php get_template_part( 'content', 'post' ); ?>
-
 
 <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog">

@@ -28,7 +28,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#"><img src="<?php bloginfo('template_url'); ?>/img/logo.png" data-active-url="<?php bloginfo('template_url'); ?>/img/logo-active.png" alt=""></a>
+				<a class="navbar-brand" href="#"><img src="<?php bloginfo('template_url'); ?>/img/logo.png" data-active-url="<?php bloginfo('template_url'); ?>/img/logo.png" alt=""></a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -37,7 +37,7 @@
 					<li><a href="#services">Servicios</a></li>
 					<li><a href="#team">Equipo</a></li>
 					<li><a href="#pricing">Precios</a></li>
-					<li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Contactanos</a></li>
+					<li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-orange">Contactanos</a></li>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
