@@ -1,21 +1,21 @@
 	<footer>
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-4 col-sm-offset-4 text-center-mobile">
+				<div class="main-footer text-center text-center-mobile">
 					<h3 class="white">Comenza ahora!</h3>
-					<h5 class="light regular light-white">Contactate con nosotros para una consulta.</h5>
-					<a href="#" class="btn btn-blue ripple trial-button">Contactanos</a>
+					<h4 class="bold regular white">Contactate con nosotros para una consulta.</h5>
+					<a href="#" class="btn .btn-lg btn-white-fill btn-footer">CONTACTANOS</a>
 				</div>
 			</div>
 			<div class="row bottom-footer text-center-mobile">
 				<div class="col-sm-8">
-					<p>&copy; <?php echo date('Y') ?> All Rights Reserved. </p>
+					<p class="white">&copy; <?php echo date('Y') ?> All Rights Reserved. </p>
 				</div>
 				<div class="col-sm-4 text-right text-center-mobile">
 					<ul class="social-footer">
-						<li><a href="http://www.facebook.com/pages/Codrops/159107397912"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="http://www.twitter.com/codrops"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="https://plus.google.com/101095823814290637419"><i class="fa fa-google-plus"></i></a></li>
+						<li><a href="https://www.facebook.com/oygaa/"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="http://www.twitter.com/"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a></li>
 					</ul>
 				</div>
 			</div>
