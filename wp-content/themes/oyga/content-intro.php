@@ -7,12 +7,16 @@
         'posts_per_page' => $num_posts,
     );
     $query = new WP_Query( $args );
+    $colors = array(
+    		'pink',
+    		'light-pink',
+    		'pink-orange'
+    	);
 
 
 ?>
 
-<section>
-	<div class="cut cut-top"></div>
+<section id="add-intro">
 	<div class="container">
 
 		<div class="row intro-tables">
@@ -22,11 +26,11 @@
        		<div class="col-md-4">
 
 				<div class="intro-table">
-					<h4 class="orange heading"><?php the_title(); ?></h5>
-					<div class="item" >
-						<p class="heading"><?php echo get_the_content(); ?></p>
-
+					<div class="icon-holder">
+						<img src="<?php the_field('intro_image')?>" alt="" class="icon">
 					</div>
+					<h4 class="heading <?php echo $colors[$query->current_post] ?>"><?php the_title(); ?></h4>
+					<p class="description"><?php echo get_the_content(); ?></p>
 
 				</div>
 			</div>

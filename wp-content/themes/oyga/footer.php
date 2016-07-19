@@ -1,10 +1,14 @@
-	<footer>
+	<footer id="footer">
 		<div class="container">
 			<div class="row">
 				<div class="main-footer text-center text-center-mobile">
-					<h3 class="white">Comenza ahora!</h3>
-					<h4 class="bold regular white">Contactate con nosotros para una consulta.</h5>
-					<a href="#" class="btn .btn-lg btn-white-fill btn-footer">CONTACTANOS</a>
+					<h3>¡Te estamos esperando!</h3>
+					<form method="post" action="<?php echo get_template_directory_uri(); ?>/test.php" class="popup-form">
+						<input type="text" class="form-control form-white" placeholder="Nombre">
+						<input type="text" class="form-control form-white" placeholder="Email">
+						<textarea class="form-control form-white" rows="6"></textarea>
+						<button type="submit" class="btn btn-submit">Enviar</button>
+					</form>
 				</div>
 			</div>
 			<div class="row bottom-footer text-center-mobile">

@@ -33,11 +33,10 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right main-nav">
-					<li><a href="#intro">Intro</a></li>
-					<li><a href="#services">Servicios</a></li>
-					<li><a href="#team">Equipo</a></li>
+					<li><a href="#intro">Quienes Somos</a></li>
+					<li><a href="#services">Que hacemos</a></li>
 					<li><a href="#pricing">Precios</a></li>
-					<li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-orange">Contactanos</a></li>
+					<li><a href="#footer" class="btn small btn-white-fill">CONTACTANOS</a></li>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->

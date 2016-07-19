@@ -17,6 +17,7 @@ jQuery(function($) {
 		});
 
 		// Header Init
+		
 		if ($(window).height() > $(window).width()) {
 			var ratio = $('.parallax').width() / $('.parallax').height();
 			$('.parallax img').css('height', ($(window).height()) + 'px');
@@ -24,6 +25,7 @@ jQuery(function($) {
 		}
 
 		$('header').height($(window).height() + 80);
+		
 		$('section .cut').each(function() {
 			if ($(this).hasClass('cut-top'))
 				$(this).css('border-right-width', $(this).parent().width() + "px");
@@ -49,31 +51,48 @@ jQuery(function($) {
 		$('nav').addClass('original').clone().insertAfter('nav').addClass('navbar-fixed-top').css('position', 'fixed').css('top', '0').css('margin-top', '0').removeClass('original');
 		$('.mobile-nav ul').html($('nav .navbar-nav').html());
 		$('nav.navbar-fixed-top .navbar-brand img').attr('src', $('nav.navbar-fixed-top .navbar-brand img').data("active-url"));
-
+		$('nav.navbar-fixed-top .btn').addClass('btn-orange-fill').removeClass('btn-white-fill');
 		// Typing Intro Init
 		$(".typed").typewriter({
 			speed: 60
 		});
 
-		// Popup Form Init
-		var i = 0;
-		var interval = 0.15;
-		$('.popup-form .dropdown-menu li').each(function() {
-			$(this).css('animation-delay', i + "s");
-			i += interval;
-		});
-		$('.popup-form .dropdown-menu li a').click(function(event) {
-			event.preventDefault();
-			$(this).parent().parent().prev('button').html($(this).html());
-		});
 
 		// Onepage Nav
 		$('.navbar.navbar-fixed-top .navbar-nav').onePageNav({
 			currentClass: 'active',
 			changeHash: false,
 			scrollSpeed: 400,
-			filter: ':not(.btn)'
 		});
+		//Buttons Navigation
+		$(".add-intro-item").click(function(e){
+		    e.preventDefault();
+
+		    var href = $(this).attr('href');
+		    var offset = $(href).offset().top - 65;
+
+		    $("html, body").animate({
+		        scrollTop: offset
+		    }, 400);
+
+		});
+
+		$(".btn-pink-border").click(function(e){
+		    e.preventDefault();
+
+		    var href = $(this).attr('href');
+		    var offset = $(href).offset().top - 65;
+
+		    $("html, body").animate({
+		        scrollTop: offset
+		    }, 400);
+
+		});
+
+		
+
+
+
 	});
 	// Window Scroll
 	function onScroll() {
@@ -135,27 +154,77 @@ jQuery(function($) {
 		}
 	});
 
-	function centerModal() {
-		$(this).css('display', 'block');
-		var $dialog = $(this).find(".modal-dialog"),
-			offset = ($(window).height() - $dialog.height()) / 2,
-			bottomMargin = parseInt($dialog.css('marginBottom'), 10);
 
-		// Make sure you don't hide the top part of the modal w/ a negative margin
-		// if it's longer than the screen height, and keep the margin equal to 
-		// the bottom margin of the modal
-		if (offset < bottomMargin) offset = bottomMargin;
-		$dialog.css("margin-top", offset);
-	}
+	//Video Header
+	//jQuery is required to run this code
+		$( document ).ready(function() {
 
-	$('.modal').on('show.bs.modal', centerModal);
+		    scaleVideoContainer();
 
-	$('.modal-popup .close-link').click(function(event){
-		event.preventDefault();
-		$('#modal1').modal('hide');
-	});
+		    initBannerVideoSize('.video-container .poster img');
+		    initBannerVideoSize('.video-container .filter');
+		    initBannerVideoSize('.video-container video');
 
-	$(window).on("resize", function() {
-		$('.modal:visible').each(centerModal);
-	});
+		    $(window).on('resize', function() {
+		        scaleVideoContainer();
+		        scaleBannerVideoSize('.video-container .poster img');
+		        scaleBannerVideoSize('.video-container .filter');
+		        scaleBannerVideoSize('.video-container video');
+		    });
+
+		});
+
+		function scaleVideoContainer() {
+
+		    var height = $(window).height() + 5;
+		    var unitHeight = parseInt(height) + 'px';
+		    $('.homepage-hero-module').css('height',unitHeight);
+
+		}
+
+		function initBannerVideoSize(element){
+
+		    $(element).each(function(){
+		        $(this).data('height', $(this).height());
+		        $(this).data('width', $(this).width());
+		    });
+
+		    scaleBannerVideoSize(element);
+
+		}
+
+		function scaleBannerVideoSize(element){
+
+		    var windowWidth = $(window).width(),
+		    windowHeight = $(window).height() + 5,
+		    videoWidth,
+		    videoHeight;
+
+		    console.log(windowHeight);
+
+		    $(element).each(function(){
+		        var videoAspectRatio = $(this).data('height')/$(this).data('width');
+
+		        $(this).width(windowWidth);
+
+		        if(windowWidth < 1000){
+		            videoHeight = windowHeight;
+		            videoWidth = videoHeight / videoAspectRatio;
+		            $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
+
+		            $(this).width(videoWidth).height(videoHeight);
+		        }
+
+		        $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
+
+		    });
+		}
+
+
+
+
+
 });
+
+
+
