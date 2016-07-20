@@ -1,4 +1,68 @@
-<?php 
+<?php
+function wpo_oyga_contacts() {
+	if( isset($_POST) ){
+		$contact = array();
+		parse_str($_POST['postdata'], $contact);
+		
+		if ( $contact['name']== '' && $contact['email'] == ''  ) {
+			
+			echo false;
+
+		}else {
+
+		
+		//Get the user for the post
+		$user = get_user_by( 'email', 'fabio@oyga.me' );
+
+		//Get the info from the post and sanitize it.
+		$name = $contact['name'];
+		$email = $contact['email'];
+		$company = $contact['company'];
+		$content = $contact['content'];
+
+		//Prepare the data
+		$data = array(
+	        'post_author' => $user->id,
+	        'post_status'   => 'publish',
+	        'post_content' => $content,
+	        'post_title' => 'Contacto de: ' . $name,
+	        'post_type' => 'contacts',
+	    );
+
+		//Get the custom fields
+
+
+
+	    //Create the post
+	    $post_id = wp_insert_post( $data );
+
+	    //Update the custom fields
+	    update_field( 'field_578fa2c6e1c2a', $name, $post_id );
+	    update_field( 'field_578fa2d5e1c2b', $email, $post_id );
+	    update_field( 'field_578fa2f2e1c2c', $company, $post_id );
+
+		echo true;
+		}
+	}	
+	die();
+}
+add_action( 'wp_ajax_wpo_oyga_contacts', 'wpo_oyga_contacts' );
+add_action( 'wp_ajax_nopriv_wpo_oyga_contacts', 'wpo_oyga_contacts' );
+
+function wpo_oyga_enable_frontend_ajax() {
+?>
+
+	<script>
+
+		var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
+
+	</script>
+
+<?php
+}
+add_action( 'wp_head', 'wpo_oyga_enable_frontend_ajax' );
+
+
 function wpo_theme_styles() {
 
 	wp_enqueue_style( 'normalize_css', get_template_directory_uri() . '/css/normalize.css' );

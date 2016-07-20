@@ -222,6 +222,38 @@ jQuery(function($) {
 
 
 
+		//Ajax Form
+		$('.form-horizontal').submit( function( e ) {
+			e.preventDefault();
+
+			var data = {
+				action: "wpo_oyga_contacts",
+				postdata: $(this).serialize()
+			}
+
+			$.ajax({
+				url: ajaxurl,
+				method: 'post',
+				data,
+				success:function(data) {
+					console.log(data);
+					if(data == true){
+						$('.notifications').find('p').remove();
+						$('.notifications').append('<p class="success"> Excelente! Enseguida te contactamos!</p>');
+					}else{
+						$('.notifications').find('p').remove();
+						$('.notifications').append('<p class="wrong"> Ups! Parece que falto completar algo!</p>');
+					};
+				},
+				error: function(errorThrown){
+					console.log(errorThrown);
+				}
+			})
+		});
+        
+
+
+
 
 
 });
