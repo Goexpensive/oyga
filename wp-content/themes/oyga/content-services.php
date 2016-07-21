@@ -13,9 +13,9 @@
 ?>
 
 
-<section id="services" class="section section-padded">
+<section id="services" class="section-top-padded">
 	<div class="container">
-		<div class="row text-center title">
+		<div class="row text-center title margin">
 			<h2 class="bold">Salsa Secreta</h2>
 		</div>
 		<div class="row services">
@@ -43,5 +43,4 @@
 
 		</div>
 	</div>
-	<div class="cut cut-bottom"></div>
 </section>

@@ -15,10 +15,10 @@ function wpo_oyga_contacts() {
 		$user = get_user_by( 'email', 'fabio@oyga.me' );
 
 		//Get the info from the post and sanitize it.
-		$name = $contact['name'];
-		$email = $contact['email'];
-		$company = $contact['company'];
-		$content = $contact['content'];
+		$name = strip_tags(($contact['name']));
+		$email = strip_tags($contact['email']);
+		$company = strip_tags($contact['company']);
+		$content = strip_tags($contact['content']);
 
 		//Prepare the data
 		$data = array(

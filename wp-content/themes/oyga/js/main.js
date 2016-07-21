@@ -23,8 +23,6 @@ jQuery(function($) {
 			$('.parallax img').css('height', ($(window).height()) + 'px');
 			$('.parallax img').css('width', $('.parallax').height() * ratio + 'px');
 		}
-
-		$('header').height($(window).height() + 80);
 		
 		$('section .cut').each(function() {
 			if ($(this).hasClass('cut-top'))
@@ -206,15 +204,25 @@ jQuery(function($) {
 		        var videoAspectRatio = $(this).data('height')/$(this).data('width');
 
 		        $(this).width(windowWidth);
+		        console.log("Width: " + windowWidth);
 
+		        
 		        if(windowWidth < 1000){
+
 		            videoHeight = windowHeight;
 		            videoWidth = videoHeight / videoAspectRatio;
 		            $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
 
 		            $(this).width(videoWidth).height(videoHeight);
-		        }
+		        }else {
+		        	videoHeight = windowHeight;
+		            videoWidth = videoHeight / videoAspectRatio;
+		            $(this).css({'margin-top' : '', 'margin-left' : ''});
 
+		            $(this).width('').height('');
+
+		        }
+				
 		        $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
 
 		    });
@@ -237,12 +245,22 @@ jQuery(function($) {
 				data,
 				success:function(data) {
 					console.log(data);
+					var $notifications = $('.notifications');
+					var notificaton = '<div> <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> </div>';
+					
 					if(data == true){
-						$('.notifications').find('p').remove();
-						$('.notifications').append('<p class="success"> Excelente! Enseguida te contactamos!</p>');
+						var message = '<strong>¡Excelente!</strong> Enseguida te contactamos.';
+						$notifications.empty();
+						$notifications.append(notificaton);
+						$notifications.children().addClass('alert alert-success');
+						$notifications.children().append(message);
+
 					}else{
-						$('.notifications').find('p').remove();
-						$('.notifications').append('<p class="wrong"> Ups! Parece que falto completar algo!</p>');
+						var message = '<strong>¡Ups!</strong> Parece que falto completar algo.';
+						$notifications.empty();
+						$notifications.append(notificaton);
+						$notifications.children().addClass('alert alert-danger');
+						$notifications.children().append(message);
 					};
 				},
 				error: function(errorThrown){

@@ -1,11 +1,13 @@
-	<section class="form" id="form">
+	<section class="section form" id="form">
 		<div class="container">
 			<div class="row">
 				<div class="main-footer text-center text-center-mobile">
 					<h2 class="heading bold">¡Te estamos esperando!</h2>
+
 					<div class="col-sm-offset-5 col-sm-6">
 						<div class="notifications">
 						</div>
+
 					</div>		
 					<form class="form-horizontal" method="POST" action="">
 						<div class="form-group">
@@ -33,7 +35,7 @@
 							</div>
 						</div>
 						<div class="col-sm-offset-5 col-sm-3 submit-form">
-							<button type="submit" class="btn btn-default btn-orange rounded">CONTACTANOS</button>
+							<button type="submit" class="btn btn-default btn-orange-fill rounded">CONTACTANOS</button>
 						</div>
 					</form>
 				</div>
@@ -60,7 +62,7 @@
 	<div class="mobile-nav">
 		<ul>
 		</ul>
-		<a href="#" class="close-link"><i class="arrow_up"></i></a>
+		<a href="#" class="close-link oyga-bg"><i class="arrow_up"></i></a>
 	</div>
 	<!-- Scripts -->
 

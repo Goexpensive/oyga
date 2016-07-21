@@ -29,7 +29,7 @@
 					<div class="icon-holder">
 						<img src="<?php the_field('intro_image')?>" alt="" class="icon">
 					</div>
-					<h4 class="heading <?php echo $colors[$query->current_post] ?>"><?php the_title(); ?></h4>
+					<h4 class=" bold heading <?php echo $colors[$query->current_post] ?>"><?php the_title(); ?></h4>
 					<p class="description"><?php echo get_the_content(); ?></p>
 
 				</div>
