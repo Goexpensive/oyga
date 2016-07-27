@@ -24,7 +24,7 @@
 	
 			<div class="col-md-4">
 				<div class="service">
-					<h4 class="heading bold"> <?php the_title(); ?> </h4>
+					<h3 class="heading bold"> <?php the_title(); ?> </h3>
 					<p class="description"><?php echo get_the_content(); ?></p>
 				</div>
 			</div>

@@ -26,7 +26,7 @@
 				<div class="col-md-4 pricing-secondary">
 					<div class="pricing-list">
 
-							<h5 class="heading bold white pink-bg"><?php the_field('catch_frase'); ?></h5>
+							<h3 class="heading bold white pink-bg"><?php the_field('catch_frase'); ?></h3>
 
 							<?php the_content(); ?>
 

@@ -70,11 +70,8 @@ h2 {
 	font-size: 48px;
 }
 
-h3 {
-	font-size: 30px;
-}
 
-h4 {
+h3, h4 {
 	font-size: 24px;
 }
 
@@ -751,10 +748,8 @@ footer .social-footer li:hover a {
 	h2 {
 		font-size: 28px;
 	}
-	h3 {
-		font-size: 24px;
-	}
-	h4 {
+
+	h3, h4 {
 		font-size: 20px;
 	}
 	h5 {
@@ -781,6 +776,24 @@ footer .social-footer li:hover a {
 	.pricing-primary{
 		margin-bottom: 10%;		
 	}
+
+	.nav-intro{
+		display: none;
+	}
+
+	.section-top-padded {
+		padding-top: 3.5%;
+		padding-bottom: 5%;
+	}
+
+	.form-horizontal .form-group {
+		text-align: left;
+	}
+
+	.submit-form {
+		text-align: center;
+
+	}	
 }
 
 @media(max-width: 768px) {
@@ -799,6 +812,7 @@ footer .social-footer li:hover a {
 	.modal {
 		padding: 0 10px !important;
 	}
+
 
 
 }
