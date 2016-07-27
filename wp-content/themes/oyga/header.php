@@ -5,7 +5,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Oyga[ME]: Tu canal de venta online</title>
+	<title><?php bloginfo('name'); ?> | <?php is_front_page() ? bloginfo('description') : wp_title(''); ?></title>
+	<meta name="description" content="Oyga.me, te ayudamos a desembarcar en el mundo de las ventas online. Con nosotros no pagas ningún costo fijo. Pagas por lo que vendes, ahora y siempre.">
 	<meta name="author" content="Fabio Vaccaro" />
 	<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/img/favicons/favicon.ico">
 
@@ -28,7 +29,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#"><img src="<?php bloginfo('template_url'); ?>/img/logo.png" data-active-url="<?php bloginfo('template_url'); ?>/img/logo.png" alt=""></a>
+				<a class="navbar-brand" href="#"><img src="<?php bloginfo('template_url'); ?>/img/logo.png" data-active-url="<?php bloginfo('template_url'); ?>/img/logo.png" alt="Logo de Oyga.me"></a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

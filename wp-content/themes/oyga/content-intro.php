@@ -27,7 +27,7 @@
 
 				<div class="intro-table">
 					<div class="icon-holder">
-						<img src="<?php the_field('intro_image')?>" alt="" class="icon">
+						<img src="<?php the_field('intro_image')?>" alt="Icono de venta online de Oyga.me" class="icon">
 					</div>
 					<h3 class=" bold heading <?php echo $colors[$query->current_post] ?>"><?php the_title(); ?></h3>
 					<p class="description"><?php echo get_the_content(); ?></p>

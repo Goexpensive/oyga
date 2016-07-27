@@ -247,7 +247,8 @@ jQuery(function($) {
 					console.log(data);
 					var $notifications = $('.notifications');
 					var notificaton = '<div> <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> </div>';
-					
+		    		var offset = $notifications.offset().top - 65;
+
 					if(data == true){
 						var message = '<strong>¡Excelente!</strong> Enseguida te contactamos.';
 						$notifications.empty();
@@ -262,13 +263,17 @@ jQuery(function($) {
 						$notifications.children().addClass('alert alert-danger');
 						$notifications.children().append(message);
 					};
+
+					$("html, body").animate({
+						scrollTop: offset
+					}, 400);
 				},
 				error: function(errorThrown){
 					console.log(errorThrown);
 				}
 			})
 		});
-        
+        		
 
 
 

@@ -13,19 +13,19 @@
 						<div class="form-group">
 							<label for="name" class="col-sm-offset-2  col-sm-3 control-label text-left">Nombre</label>
 							<div class="col-sm-6">
-								<input type="text" class="form-control gray-form" name="name" id="name" placeholder="Nombre">
+								<input type="text" class="form-control gray-form" name="name" id="name" placeholder="">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="email" class="col-sm-offset-2 col-sm-3 control-label text-left">E-mail</label>
 							<div class="col-sm-6">
-								<input type="email" class="form-control gray-form" name="email" id="email" placeholder="Email">
+								<input type="email" class="form-control gray-form" name="email" id="email" placeholder="">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="company" class="col-sm-offset-2 col-sm-3 control-label ">Empresa</label>
 							<div class="col-sm-6">
-								<input type="text" class="form-control gray-form" name="company" id="company" placeholder="Empresa">
+								<input type="text" class="form-control gray-form" name="company" id="company" placeholder="">
 							</div>
 						</div>
 						<div class="form-group">

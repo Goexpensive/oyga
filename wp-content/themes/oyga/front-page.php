@@ -27,7 +27,7 @@
 	            <source src="<?php bloginfo('template_url'); ?>/video/For_Wes.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
 	        </video>
 	        <div class="poster hidden">
-	            <img src="<?php bloginfo('template_url'); ?>/img/For_Wes.jpg" alt="">
+	            <img src="<?php bloginfo('template_url'); ?>/img/For_Wes.jpg" alt="Imagen del video de oyga">
 	        </div>
 	        <div class="nav-intro">
 	            <a class="add-intro-item" href="#add-intro">
