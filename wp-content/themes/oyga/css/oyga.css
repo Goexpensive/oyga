@@ -63,11 +63,11 @@ h6 {
 }
 
 h1 {
-	font-size: 60px;
+	font-size: 70px;
 }
 
 h2 {
-	font-size: 48px;
+	font-size: 60px;
 }
 
 
@@ -297,7 +297,6 @@ nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
 	color: #fff;
 	border-color: #fff;
 	background: transparent;
-	border-radius: 15px;
 	font-size: 16px;
 	font-weight: bold;
 	padding: 10px 20px;
@@ -417,7 +416,7 @@ section {
 
 .intro-table .heading {
 	margin-bottom: 5%;
-	padding: 0 5%;
+	padding: 0 8.5%;
 }
 
 .intro-table .description {
@@ -504,7 +503,7 @@ section {
 }
 
 .pricing-secondary ul{
-	margin: 20px 0px 0px 15px;
+	margin: 20px 5px 0px 5px;
 	padding: 0;
 	
 
@@ -512,6 +511,7 @@ section {
 .pricing-secondary  ul li{
 	list-style: none;
 	text-align: left;
+	margin-left: 10px;
 	padding-left: 40px;
 	padding-top: 5px;
 	padding-bottom: 5px; 
@@ -521,6 +521,12 @@ section {
 }
 .pricing-secondary  ul li.checked{
 	background: url('../img/check.png') left center no-repeat;
+}
+.pricing-secondary  ul li.center{
+	text-align: center;
+    padding: 25px 5px 5px 5px;
+    font-weight: bold;
+    margin: 0;
 }
 
 
@@ -555,7 +561,7 @@ section.form  {
 
 .gray-form {
 	background-color: #f0f1f5;
-	border: 0; 
+	border: 1px solid #f0f1f5;
 
 } 
 .form-horizontal .control-label {
@@ -572,7 +578,11 @@ section.form  {
 footer {
 	background-color: #f0f1f5;
 	padding-top: 2%;
-	padding-bottom: 2%;
+	padding-bottom: 1%;
+}
+
+footer p {
+	margin: 5px 0px 10px 0px;
 }
 
 

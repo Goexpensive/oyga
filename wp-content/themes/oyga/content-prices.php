@@ -20,7 +20,7 @@
 				<div class="col-md-4 pricing-primary">
 					<h2 class="heading bold"> <?php the_title(); ?> </h2>
 					<p class="description"><?php the_field('description'); ?></p>
-					<a href="#form" class="btn btn-pink-border"><?php the_field('label_button'); ?></a>
+					<a href="#form" class="btn btn-pink-border rounded"><?php the_field('label_button'); ?></a>
 				</div>
 				<div class="col-md-1"></div>
 				<div class="col-md-4 pricing-secondary">

@@ -228,7 +228,75 @@ jQuery(function($) {
 		    });
 		}
 
+		/*
+		<div class="form-group has-success">
+		  <label class="control-label" for="inputSuccess1">Input with success</label>
+		  <input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2">
+		  <span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+		</div>
+		<div class="form-group">
+			<label for="name" class="col-sm-offset-2  col-sm-3 control-label text-left">Nombre</label>
+			<div class="col-sm-6">
+				<input type="text" class="form-control gray-form" name="name" id="name" placeholder="">
+			</div>
+		</div>
 
+		*/
+		//Validacion de Formulario
+		var formName = $('#name');
+		var formEmail = $('#email');
+ 
+
+		var isInputValid = function ( regex, text ) {
+			var isValid = false;
+			console.log(regex.test(text));
+			if(  regex.test(text) ){
+				isValid = true;
+			}
+
+			return isValid;
+		
+		}
+		var validateForm = function ( regex , element, message ) {
+			var helpMessage = '<span class="help-block"></span>';
+
+			if(!isInputValid( regex, element.val() )){
+		
+				element.parent().parent().addClass('has-error');
+				element.parent().children('span').remove();
+				element.parent().append(helpMessage);
+				element.parent().children('span').text(message);
+			} else {
+				console.log('Else');
+				element.parent().parent().removeClass('has-error');
+				element.parent().children('span').remove();	
+			}	
+
+		}
+
+		formName.change(function(){
+			validateForm( /^[A-Za-z\s]+$/, formName, 'Ups! El nombre es olbigatorio y solo puede tener letras' );
+		}).keydown(function(){
+			validateForm( /^[A-Za-z\s]+$/, formName, 'Ups! El nombre es olbigatorio y solo puede tener letras' );
+		});
+		formEmail.change(function(){
+			validateForm( /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/, formEmail, 'Ups! El mail es olbigatorio y tiene que ser valido' );
+		}).keydown(function(){
+			validateForm( /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/, formEmail, 'Ups! El mail es olbigatorio y tiene que ser valido' );
+		});
+
+
+
+		var appendNotification = function ( message, notificationClass ) {
+			var $notifications = $('.notifications');
+			var notificaton = '<div> <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> </div>';
+	    		
+			$notifications.empty();
+			$notifications.append(notificaton);
+			$notifications.children().addClass(notificationClass);
+			$notifications.children().append(message);
+
+		}
 
 		//Ajax Form
 		$('.form-horizontal').submit( function( e ) {
@@ -245,23 +313,15 @@ jQuery(function($) {
 				data,
 				success:function(data) {
 					console.log(data);
-					var $notifications = $('.notifications');
-					var notificaton = '<div> <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> </div>';
-		    		var offset = $notifications.offset().top - 65;
+					var offset = $notifications.offset().top - 65;
 
 					if(data == true){
 						var message = '<strong>¡Excelente!</strong> Enseguida te contactamos.';
-						$notifications.empty();
-						$notifications.append(notificaton);
-						$notifications.children().addClass('alert alert-success');
-						$notifications.children().append(message);
+						appendNotification(message, 'alert alert-success');
 
 					}else{
 						var message = '<strong>¡Ups!</strong> Parece que falto completar algo.';
-						$notifications.empty();
-						$notifications.append(notificaton);
-						$notifications.children().addClass('alert alert-danger');
-						$notifications.children().append(message);
+						appendNotification(message, 'alert alert-danger');
 					};
 
 					$("html, body").animate({

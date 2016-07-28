@@ -16,7 +16,7 @@
 <section id="services" class="section-top-padded">
 	<div class="container">
 		<div class="row text-center title margin">
-			<h2 class="bold">Salsa Secreta</h2>
+			<h2 class="bold">Nuestra salsa secreta</h2>
 		</div>
 		<div class="row services">
 

@@ -49,4 +49,6 @@
 
 <?php get_template_part( 'content', 'team' ); ?>
 
+<?php get_template_part( 'content', 'form' ); ?>
+
 <?php get_footer(); ?>

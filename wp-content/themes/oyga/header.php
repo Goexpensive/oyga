@@ -34,7 +34,7 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right main-nav">
-					<li class="active"><a href="#intro">Quienes Somos</a></li>
+					<li class="active"><a href="#intro">Intro</a></li>
 					<li><a href="#services">Que hacemos</a></li>
 					<li><a href="#pricing">Precios</a></li>
 					<li><a href="#form" class="btn small btn-white-fill">CONTACTANOS</a></li>
