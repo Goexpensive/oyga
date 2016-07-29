@@ -312,7 +312,7 @@ jQuery(function($) {
 				method: 'post',
 				data,
 				success:function(data) {
-					console.log(data);
+					var $notifications = $('.notifications');
 					var offset = $notifications.offset().top - 65;
 
 					if(data == true){
