@@ -355,16 +355,16 @@ nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
 
 section {
 	position: relative;
-	padding: 2% 0;
+	padding: 3% 0;
 	background: #fff;
 }
 
 .section-top-padded{
-	padding-top: 3.5%;
+	padding-top: 4%;
 }
 
 .section-padded {
-	padding: 7.5% 0;
+	padding: 10% 0;
 }
 
 
@@ -558,18 +558,18 @@ section.form  {
 	margin: 0 auto;
 }
 
-
+.form-contact {
+	max-width: 600px;
+	margin: 0 auto;
+}
 .gray-form {
 	background-color: #f0f1f5;
 	border: 1px solid #f0f1f5;
 
 } 
-.form-horizontal .control-label {
-    text-align: left;
-}
 .submit-form {
 	padding: 12px 6px;
- 	text-align: left;
+ 	text-align: center;
 
 }
 

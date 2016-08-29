@@ -54,7 +54,8 @@ function wpo_oyga_enable_frontend_ajax() {
 
 	<script>
 
-		var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
+		var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>',
+			templateUrl = '<?php echo bloginfo('template_url'); ?>';
 
 	</script>
 

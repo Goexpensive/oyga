@@ -4,7 +4,7 @@
 				<div class="col-sm-8">
 					<p>&copy; <?php echo date('Y') ?> All Rights Reserved. </p>
 				</div>
-				<div class="col-sm-4 text-right text-center-mobile">
+				<div class="col-sm-4 text-right text-center-mobile hidden">
 					<ul class="social-footer">
 						<li><a href="https://www.facebook.com/oygaa/"><i class="fa fa-facebook"></i></a></li>
 						<li><a href="http://www.twitter.com/"><i class="fa fa-twitter"></i></a></li>

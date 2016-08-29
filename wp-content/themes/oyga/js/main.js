@@ -31,19 +31,7 @@ jQuery(function($) {
 				$(this).css('border-left-width', $(this).parent().width() + "px");
 		});
 
-		// Sliders Init
-		$('.owl-schedule').owlCarousel({
-			singleItem: true,
-			pagination: true
-		});
-		$('.owl-testimonials').owlCarousel({
-			singleItem: true,
-			pagination: true
-		});
-		$('.owl-twitter').owlCarousel({
-			singleItem: true,
-			pagination: true
-		});
+
 
 		// Navbar Init
 		$('nav').addClass('original').clone().insertAfter('nav').addClass('navbar-fixed-top').css('position', 'fixed').css('top', '0').css('margin-top', '0').removeClass('original');
@@ -86,12 +74,9 @@ jQuery(function($) {
 		    }, 400);
 
 		});
-
-		
-
-
-
 	});
+
+
 	// Window Scroll
 	function onScroll() {
 		if ($(window).scrollTop() > 50) {
@@ -198,8 +183,6 @@ jQuery(function($) {
 		    videoWidth,
 		    videoHeight;
 
-		    console.log(windowHeight);
-
 		    $(element).each(function(){
 		        var videoAspectRatio = $(this).data('height')/$(this).data('width');
 
@@ -228,20 +211,17 @@ jQuery(function($) {
 		    });
 		}
 
-		/*
-		<div class="form-group has-success">
-		  <label class="control-label" for="inputSuccess1">Input with success</label>
-		  <input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2">
-		  <span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
-		</div>
-		<div class="form-group">
-			<label for="name" class="col-sm-offset-2  col-sm-3 control-label text-left">Nombre</label>
-			<div class="col-sm-6">
-				<input type="text" class="form-control gray-form" name="name" id="name" placeholder="">
-			</div>
-		</div>
+		$(window).load(function() {
+			var video = $('.video');
+			var sources = [templateUrl + "/video/For_Wes.mp4", templateUrl + "/video/For_Wes.webm"];
+			video.append('<source src="' + sources[0] + '"+type="video/mp4" />');
+			video.append('<source src="' + sources[1] + '"+type="video/webm" />');
+			$('.poster').addClass('hidden');
 
-		*/
+			
+
+		})
+
 		//Validacion de Formulario
 		var formName = $('#name');
 		var formEmail = $('#email');
@@ -262,13 +242,13 @@ jQuery(function($) {
 
 			if(!isInputValid( regex, element.val() )){
 		
-				element.parent().parent().addClass('has-error');
+				element.parent().addClass('has-error');
 				element.parent().children('span').remove();
 				element.parent().append(helpMessage);
 				element.parent().children('span').text(message);
 			} else {
 				console.log('Else');
-				element.parent().parent().removeClass('has-error');
+				element.parent().removeClass('has-error');
 				element.parent().children('span').remove();	
 			}	
 
@@ -299,7 +279,7 @@ jQuery(function($) {
 		}
 
 		//Ajax Form
-		$('.form-horizontal').submit( function( e ) {
+		$('.form-contact').submit( function( e ) {
 			e.preventDefault();
 
 			var data = {
@@ -334,10 +314,6 @@ jQuery(function($) {
 			})
 		});
         		
-
-
-
-
 
 });
 
