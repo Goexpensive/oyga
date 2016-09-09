@@ -37,6 +37,7 @@
 					<li class="active"><a href="#intro">Intro</a></li>
 					<li><a href="#services">Que hacemos</a></li>
 					<li><a href="#pricing">Precios</a></li>
+					<li><a href="<?php echo get_permalink(); ?>/blog" ">Blog</a></li>
 					<li><a href="#form" class="btn small btn-white-fill">CONTACTANOS</a></li>
 				</ul>
 			</div>
