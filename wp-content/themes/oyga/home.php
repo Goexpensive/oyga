@@ -1,5 +1,148 @@
 <?php get_header(); ?>
 
+<section class="promoted">
+    
+    <div class="container">
+        <article class="promoted-post">
+                <a href="">
+                    <figure class="post-image">
+                        <img  width="1200" height="800" class="attachment-full size-full wp-post-image" src="<?php bloginfo('template_url'); ?>/img/test.jpg" />
+                    </figure>
+                    <div class="promoted-data">
+                        <header class="post-header">
+                            <h2 class="post-title">Mejora tu calidad de vida aprendiendo a administrar tu dinero</h2>
+                        </header>
+                        <footer class="post-meta">
+                            <img src="https://platzi.com/blog/wp-content/authors/Anna%20Heim-7.jpeg" class="avatar photo" alt="Anna Heim" width="35" height="35">
+                            <p class="author">Sergio Zafra</p>
+                            <time itemprop="datePublished" class="post-date" datetime="{{date format='MM-DD-YYYY'}}">septiembre 14 2016</time>
+                        </footer>
+                    </div>
+                </a>
+        </article>    
+    </div>
+    
+<section>
+
+<section id="blog" class="posts-section">
+    <div class="container">
+
+        <article class="post">
+            <header class="post-header">
+                <a href="">
+                    <figure class="post-image">
+                        <img  width="1200" height="800" class="attachment-full size-full wp-post-image" src="<?php bloginfo('template_url'); ?>/img/test.jpg" />
+                        <h2 class="post-title">Mejora tu calidad de vida aprendiendo a administrar tu dinero</h2>
+                    </figure>
+                </a>
+            </header>
+            <footer class="post-meta">
+                <p class="author">Sergio Zafra</p>
+                <time itemprop="datePublished" class="post-date" datetime="{{date format='MM-DD-YYYY'}}">septiembre 14 2016</time>
+            </footer>
+            
+        </article>
+
+        <article class="post">
+            <header class="post-header">
+                <a href="">
+                    <figure class="post-image">
+                        <img  width="1200" height="800" class="attachment-full size-full wp-post-image" src="<?php bloginfo('template_url'); ?>/img/test.jpg" />
+                        <h2 class="post-title">Mejora tu calidad de vida aprendiendo a administrar tu dinero</h2>
+                    </figure>
+                </a>
+            </header>
+            <footer class="post-meta">
+                <p class="author">Sergio Zafra</p>
+                <time itemprop="datePublished" class="post-date" datetime="{{date format='MM-DD-YYYY'}}">septiembre 14 2016</time>
+            </footer>
+            
+        </article>
+
+        <article class="post">
+            <header class="post-header">
+                <a href="">
+                    <figure class="post-image">
+                        <img  width="1200" height="800" class="attachment-full size-full wp-post-image" src="<?php bloginfo('template_url'); ?>/img/test.jpg" />
+                        <h2 class="post-title">Mejora tu calidad de vida aprendiendo a administrar tu dinero</h2>
+                    </figure>
+                </a>
+            </header>
+            <footer class="post-meta">
+                <p class="author">Sergio Zafra</p>
+                <time itemprop="datePublished" class="post-date" datetime="{{date format='MM-DD-YYYY'}}">septiembre 14 2016</time>
+            </footer>
+            
+        </article>
+
+        <article class="post">
+            <header class="post-header">
+                <a href="">
+                    <figure class="post-image">
+                        <img  width="1200" height="800" class="attachment-full size-full wp-post-image" src="<?php bloginfo('template_url'); ?>/img/test.jpg" />
+                        <h2 class="post-title">Mejora tu calidad de vida aprendiendo a administrar tu dinero</h2>
+                    </figure>
+                </a>
+            </header>
+            <footer class="post-meta">
+                <p class="author">Sergio Zafra</p>
+                <time itemprop="datePublished" class="post-date" datetime="{{date format='MM-DD-YYYY'}}">septiembre 14 2016</time>
+            </footer>
+            
+        </article>
+
+        <article class="post">
+            <header class="post-header">
+                <a href="">
+                    <figure class="post-image">
+                        <img  width="1200" height="800" class="attachment-full size-full wp-post-image" src="<?php bloginfo('template_url'); ?>/img/test.jpg" />
+                        <h2 class="post-title">Mejora tu calidad de vida aprendiendo a administrar tu dinero</h2>
+                    </figure>
+                </a>
+            </header>
+            <footer class="post-meta">
+                <p class="author">Sergio Zafra</p>
+                <time itemprop="datePublished" class="post-date" datetime="{{date format='MM-DD-YYYY'}}">septiembre 14 2016</time>
+            </footer>
+            
+        </article>
+
+        <article class="post">
+            <header class="post-header">
+                <a href="">
+                    <figure class="post-image">
+                        <img  width="1200" height="800" class="attachment-full size-full wp-post-image" src="<?php bloginfo('template_url'); ?>/img/test.jpg" />
+                        <h2 class="post-title">Mejora tu calidad de vida aprendiendo a administrar tu dinero</h2>
+                    </figure>
+                </a>
+            </header>
+            <footer class="post-meta">
+                <p class="author">Sergio Zafra</p>
+                <time itemprop="datePublished" class="post-date" datetime="{{date format='MM-DD-YYYY'}}">septiembre 14 2016</time>
+            </footer>
+            
+        </article>
+
+        <article class="post">
+            <header class="post-header">
+                <a href="">
+                    <figure class="post-image">
+                        <img  width="1200" height="800" class="attachment-full size-full wp-post-image" src="<?php bloginfo('template_url'); ?>/img/test.jpg" />
+                        <h2 class="post-title">Mejora tu calidad de vida aprendiendo a administrar tu dinero</h2>
+                    </figure>
+                </a>
+            </header>
+            <footer class="post-meta">
+                <p class="author">Sergio Zafra</p>
+                <time itemprop="datePublished" class="post-date" datetime="{{date format='MM-DD-YYYY'}}">septiembre 14 2016</time>
+            </footer>
+            
+        </article>
+
+
+    </div>
+</section>
+
 <section class="two-column row no-max pad">
   <div class="small-12 columns">
     <div class="row">

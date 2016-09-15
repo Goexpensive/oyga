@@ -1,6 +1,6 @@
 
 <?php get_header(); ?>
-<header id="intro">
+<header class="header" id="intro">
 	<div class="homepage-hero-module">
 	    <div class="video-container">
 	    	<div class="title-container">

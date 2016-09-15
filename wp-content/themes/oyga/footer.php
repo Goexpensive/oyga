@@ -1,4 +1,4 @@
-<footer id="footer">
+<footer class="footer" id="footer">
 		<div class="container">		
 			<div class="row bottom-footer text-center-mobile">
 				<div class="col-sm-8">
