@@ -317,7 +317,18 @@ jQuery(function($) {
 
 		//BLog Header
 		var pathname = window.location.pathname;
-		console.log(pathname);
+		if(/blog/.test(pathname)){
+			$('.navbar').addClass('oyga-bg');
+			$('.navbar-header img').attr('src',templateUrl + '/img/logo-white.png');
+			$('.navbar li').removeClass('active');
+			$('.navbar li').addClass('blog-li');
+			$('.navbar li:nth-child(4)').addClass('blog-li-active');
+
+
+
+		}else{console.log('false')};
+
+		
         		
 
 });

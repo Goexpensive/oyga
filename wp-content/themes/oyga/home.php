@@ -30,7 +30,7 @@
                         <footer class="post-meta">
                             <?php echo get_avatar( get_the_author_meta( 'ID' ), 24 ); ?>
                             <p class="author"><?php echo get_the_author(); ?></p>
-                            <time itemprop="datePublished" class="post-date" datetime="{{date format='MM-DD-YYYY'}}"><?php the_time( 'F j, Y' );?></time>
+                            <time class="post-date" datetime="{{date format='MM-DD-YYYY'}}"><?php the_time( 'd/m/Y' );?></time>
                         </footer>
                     </div>
                 </a>
@@ -47,7 +47,7 @@
     ?>
         <article class="post">
             <header class="post-header">
-                <a href="">
+                <a href="<?php the_permalink();?>">
                     <figure class="post-image">
                         <?php the_post_thumbnail('small' ); ?>
                     </figure>
@@ -56,7 +56,7 @@
             </header>
             <footer class="post-meta">
                 <p class="author"><?php echo get_the_author(); ?></p>
-                <time itemprop="datePublished" class="post-date" datetime="{{date format='MM-DD-YYYY'}}"><?php the_time( 'F j, Y' );?></time>
+                <time class="post-date" datetime="{{date format='MM-DD-YYYY'}}"><?php the_time( 'd/m/Y' );?></time>
             </footer>
             
         </article>

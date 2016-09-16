@@ -29,16 +29,16 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#"><img src="<?php bloginfo('template_url'); ?>/img/logo.png" data-active-url="<?php bloginfo('template_url'); ?>/img/logo.png" alt="Logo de Oyga.me"></a>
+				<a class="navbar-brand" href="<?php echo get_site_url() ?>/#"><img src="<?php bloginfo('template_url'); ?>/img/logo.png" data-active-url="<?php bloginfo('template_url'); ?>/img/logo.png" alt="Logo de Oyga.me"></a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right main-nav">
 					<li class="active"><a href="#intro">Intro</a></li>
-					<li><a href="#services">Que hacemos</a></li>
-					<li><a href="#pricing">Precios</a></li>
+					<li><a href="<?php echo get_site_url() ?>/#services">Que hacemos</a></li>
+					<li><a href="<?php echo get_site_url() ?>/#pricing">Precios</a></li>
 					<li><a href="<?php echo get_permalink(); ?>/blog" ">Blog</a></li>
-					<li><a href="#form" class="btn small btn-white-fill">CONTACTANOS</a></li>
+					<li><a href="<?php echo get_site_url() ?>/#form" class="btn small btn-white-fill">CONTACTANOS</a></li>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
