@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 
-<section class='post-template'>
-    <article>
+<section class="post-template">
+    <article class="post">
         <header>
-            <figure>
-                <img src="">
+            <figure class="post-image">
+                <img  width="1200" height="800" class="attachment-full size-full wp-post-image" src="<?php bloginfo('template_url'); ?>/img/test.jpg" />
             </figure>
         </header>
-        <div class="wrap">
-            <h1></h1>
+        <div class="container">
+            <h1 class="post-title">Consejos de fotografía por Iván Castro [Vídeo]</h1>
         </div>
         <div class="container">
             <div class="post-meta" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">

@@ -1,4 +1,6 @@
 <?php
+add_theme_support( 'post-thumbnails' );
+
 function wpo_oyga_contacts() {
 	if( isset($_POST) ){
 		$contact = array();
