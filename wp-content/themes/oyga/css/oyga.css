@@ -572,6 +572,10 @@ section.form  {
  	text-align: center;
 
 }
+.notifications {
+	max-width: 600px;
+	margin: 0 auto;
+}
 
 /* Footer */
 

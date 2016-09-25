@@ -279,6 +279,7 @@ jQuery(function($) {
 		}
 
 		//Ajax Form
+
 		$('.form-contact').submit( function( e ) {
 			e.preventDefault();
 
@@ -298,6 +299,7 @@ jQuery(function($) {
 					if(data == true){
 						var message = '<strong>¡Excelente!</strong> Enseguida te contactamos.';
 						appendNotification(message, 'alert alert-success');
+						$('.form-contact').hide();
 
 					}else{
 						var message = '<strong>¡Ups!</strong> Parece que falto completar algo.';
@@ -312,6 +314,10 @@ jQuery(function($) {
 					console.log(errorThrown);
 				}
 			})
+		});
+
+		$('.notifications').click(function (){
+			$('.form-contact').show();
 		});
         		
 

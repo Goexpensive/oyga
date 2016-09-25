@@ -18,6 +18,7 @@ function wpo_oyga_contacts() {
 		$name = strip_tags(($contact['name']));
 		$email = strip_tags($contact['email']);
 		$company = strip_tags($contact['company']);
+		$phone = strip_tags($contact['phone']);
 		$content = strip_tags($contact['content']);
 
 		//Prepare the data
@@ -40,8 +41,12 @@ function wpo_oyga_contacts() {
 	    update_field( 'field_578fa2c6e1c2a', $name, $post_id );
 	    update_field( 'field_578fa2d5e1c2b', $email, $post_id );
 	    update_field( 'field_578fa2f2e1c2c', $company, $post_id );
+	    update_field( 'field_57e850fd24004', $phone, $post_id );
+
+	    mail('fabio@oyga.me', 'Mi título', 'test');
 
 		echo true;
+
 		}
 	}	
 	die();

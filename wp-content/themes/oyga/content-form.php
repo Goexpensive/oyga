@@ -3,17 +3,12 @@
 		<div class="row">
 			<div class="main-footer text-center text-center-mobile">
 				<h2 class="heading bold">¡Te estamos esperando!</h2>
-
-				<div >
-					<div class="notifications">
-					</div>
-
-				</div>		
+				<div class="notifications">
+				</div>
 				<form  class="form-contact text-left" method="POST" action="">
 					<div class="form-group">
 						<label for="name">Nombre</label>
 						<input type="text" class="form-control gray-form" name="name" id="name" placeholder="">
-
 					</div>
 					<div class="form-group">
 						<label for="email">E-mail</label>
@@ -22,7 +17,10 @@
 					<div class="form-group">
 						<label for="company">Empresa</label>
 						<input type="text" class="form-control gray-form" name="company" id="company" placeholder="">
-
+					</div>
+					<div class="form-group">
+						<label for="phone">Teléfono</label>
+						<input type="tel" class="form-control gray-form" name="phone" id="phone" placeholder="">
 					</div>
 					<div class="form-group">
 						<label for="content">¡Contanos sobre tu marca!</label>
