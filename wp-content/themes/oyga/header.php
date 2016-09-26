@@ -8,6 +8,7 @@
 	<title><?php bloginfo('name'); ?> | <?php is_front_page() ? bloginfo('description') : wp_title(''); ?></title>
 	<meta name="description" content="Oyga.me, te ayudamos a desembarcar en el mundo de las ventas online. Con nosotros no pagas ningún costo fijo. Pagas por lo que vendes, ahora y siempre." >
 	<meta name="author" content="Fabio Vaccaro" >
+	<meta name="google-site-verification" content="mrbQfCyarlJDHQNrTsn8wYco6-c0N9E8_Cca4xjgx_I" />
 	<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/img/favicons/favicon.ico">
 
 
